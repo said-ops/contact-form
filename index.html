@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Contact form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="toast-msg disp" id="toast">
+    <div class="icon">
+      <img src="./assets/images/icon-success-check.svg" alt="icon-success-check">
+      <h3>Message Sent!</h3>
+    </div>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+  <div class="container">
+    <form action="" method="POST" id="form" novalidate>
+      <div class="title">
+        Contact Us
+      </div>
+      <fieldset class="full-name">
+        <div class="first-name">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="fname">
+          <span class="error-msg " id="fname-error"></span>
+        </div>
+        <div class="last-name">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lname">
+          <span class="error-msg  " id="lname-error"></span>
+        </div>
+      </fieldset>
+      <fieldset class="user-email">
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email" >
+        <span class="error-msg "  id="email-error"> <!--Please enter a valid email address--></span>
+      </fieldset>
+      <fieldset class="query-type">
+        <label>Query Type</label>
+        <div class="elements">
+          <div class="element">
+            <input type="radio" name="query" id="general" onclick="changeBackground(this)">
+            <label for="general">General Enquiry</label>
+          </div>
+          <div class="element">
+            <input type="radio" name="query" id="support" onclick="changeBackground(this)">
+            <label for="support">General Enquiry</label>
+          </div>
+        </div>
+        <span class="error-msg" id="query-error"></span>
+      </fieldset>
+      <fieldset class="message">
+        <label for="">Message</label>
+        <textarea name="message" id="message" ></textarea>
+        <span class="error-msg"  id="msg-error"></span>
+      </fieldset>
+      <fieldset class="consent">
+        <div class="agreed">
+          <input type="checkbox" name="consent" id="consent">
+          <label for="consent">I consent to being contacted by the team</label>
+        </div> 
+        <span class="error-msg"  id="consent-error"></span>
+      </fieldset>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <!-- Message Sent!
+  Thanks for completing the form. We'll be in touch soon! -->
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/said-ops">Said</a>.
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
